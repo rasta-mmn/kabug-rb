@@ -6,19 +6,19 @@ pipeline {
     }
     
     stages {
-        stage ('Build'){
+        stage('Build'){
             steps {
                  echo 'Building or Resolve Dependences!'
                  sh 'bundle install'
             }
         }
-        stage ('Test'){
+        stage('Test'){
             steps {
                 echo 'Running regression tests'
                 sh 'bundle exec cucumber'
             }
         }
-        stage ('UAT') {
+        stage('UAT') {
             steps {
                 echo 'Wait for User Acceptance'
                 input (message: 'Go to production?', ok: 'Yes')
