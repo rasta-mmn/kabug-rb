@@ -6,7 +6,6 @@ pipeline {
     }
     
     stages {
-        
         stage ('Build'){
             steps {
                  echo 'Building or Resolve Dependences!'
@@ -31,5 +30,4 @@ pipeline {
             }
         }
     }
-    
 }
