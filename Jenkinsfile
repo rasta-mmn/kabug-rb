@@ -9,7 +9,6 @@ pipeline {
         stage('Build'){
             steps {
                  echo 'Building or Resolve Dependences'
-                 gem 'cucumber', '~> 5.3'
                  sh 'rm -f Gemfile.lock'
                  sh 'bundle install'
             }
